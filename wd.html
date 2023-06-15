@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .hero{
+            background-color: rgb(19, 12, 12);
+          width: 100%;
+          min-height: 100vh;
+          position: relative;
+
+        }
+       nav {
+          display: flex;
+          position: relative;
+          top: 20px;
+       }
+       nav .logo{
+         height: 100px;
+         width: 100px;
+         position: relative;
+         left: 60px;
+         top: 10px;
+       }
+       nav .menu{
+        height: 30px;
+        width: 40px;
+         float: right;  
+         position: relative;
+         left: 40px;
+         top: 50px;
+
+       }
+       nav ul{
+        flex: 1;
+        text-align: right;
+       }
+       nav ul li{
+        display: inline-block;
+        list-style: none;
+        padding:0px 40px;
+       }
+       nav ul li a{
+        text-decoration: none;
+        color: white;
+       }
+       button{
+        height: 30px;
+        width: 60px;
+        margin: 15px;
+        border-radius: 20px;
+        outline: 0;
+        border: 0;
+        transition-duration:  0.5s;
+       }
+       button span{
+        display: block;
+        border-radius: 50%;
+        height: 26px;
+        width: 26px;
+        background-color: rgb(70, 56, 56);
+        transition: background 0.5s;
+       }
+       .container {
+        position: relative;
+        left: 22%;
+        top:  -100px;
+        width: 150px;
+       }
+       .lamp{
+        width: 200px;
+        top: 0;
+       }
+       .light{
+        width: 700px;
+        left: -260px;
+        position: relative;
+        top: -10px;
+        opacity: 0;
+        transition: opacity 0.5s;
+       }
+       .text{
+        color: white;
+        position: absolute;
+        top: 300px;
+        left: 800px;
+        width: 500px;
+       }
+       .text h1{
+        font-size: 50px;
+       }
+       .text a{
+        background-color: rgb(11, 157, 45);
+        border-radius: 20px;
+        padding: 7px;
+        text-decoration: none;
+        color: white;
+       }
+       .active{
+        background-color: green;
+       }
+       .active span{
+          background-color: aqua;
+       }
+       .on{
+        opacity: 1;
+       }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="menu.png" class="menu">
+            <img src="logo.png" class="logo">
+            <ul class="home">
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">Modern</a></li>
+                <li><a href="#">Contemporary</a></li>
+                <li><a href="#">Affordable</a></li>
+                </ul>
+               <button type="button" onclick="toggleBtn" id="btn"><span></span></button>
+        </nav>
+         <div class="container">
+               <img src="lamp.png" class="lamp">
+               <img src="light.png" class="light" id="light">
+         </div>
+         <div class="text">
+               <h1> latest in lightining</h1>
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero atque iste debitis dolor error odio molestiae autem? Quod, facere omnis?</p>
+               <a href="">check all collections</a>
+        </div>
+    </div>
+<script>
+    var btn=document.getElementById("btn");
+    var light=document.getElementById("light");
+    function toggleBtn(){
+        btn.classList.toggle("active");
+        light.classList.toggle("on");
+    }
+    
+</script>
+
+</body>
+</html>
